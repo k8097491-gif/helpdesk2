@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Helpdesk — IT-поддержка вуза</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Ссылка для тех, кто ходит по странице клавишей Tab -->
+  <a class="skip-link" href="#content">К содержимому</a>
+
+  <!-- Сюда скрипт рисует либо страницу входа, либо само приложение -->
+  <div id="root"></div>
+
+  <!-- Всплывающие сообщения («Заявка создана» и т.п.) -->
+  <div id="toasts" role="status" aria-live="polite"></div>
+
+  <!-- Окно с формой (комментарий, эскалация, оценка ...) -->
+  <dialog id="dialog"></dialog>
+
+  <!-- Порядок важен: каждый следующий файл использует функции из предыдущих -->
+  <script src="helpers.js"></script>
+  <script src="tickets.js"></script>
+  <script src="pages.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
